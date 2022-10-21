@@ -77,7 +77,7 @@ create_search_index_0:
     CONTAINER_NAME=wiki_${CI_JOB_ID}
     docker run -d --rm --name $CONTAINER_NAME sc-registry.fredhutch.org/wiki:test
     rm -rf elasticsearch/tmp && mkdir elasticsearch/tmp
-    docker cp wiki:/usr/share/nginx/html/ ./elasticsearch/tmp/
+    docker cp $CONTAINER_NAME:/usr/share/nginx/html/ ./elasticsearch/tmp/
     docker rm -f $CONTAINER_NAME
     echo fultr
     ls -l elasticsearch
