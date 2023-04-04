@@ -36,6 +36,7 @@ build:
     rm -rf easybuild-life-sciences-main main.zip ./_scicomputing/bio-modules-18.04.md.orig
     # faster than cloning:
     curl -LO https://github.com/FredHutch/easybuild-life-sciences/archive/refs/heads/main.zip
+    unzip -l main.zip
     unzip -qq main.zip
     cp easybuild-life-sciences-main/docs/_r/* ./_rModules/
     cp easybuild-life-sciences-main/docs/_python/* ./_pythonModules/
