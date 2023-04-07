@@ -1,7 +1,7 @@
 default:
   before_script:
     - apk update
-    - apk --no-cache add py3-pip python3 curl git jq bash
+    - apk --no-cache add py3-pip python3 curl git jq bash unzip
     - pip3 install pyyaml
     - curl -O https://raw.githubusercontent.com/FredHutch/swarm-build-helper/main/build_helper.py 
     # below is from https://stackoverflow.com/a/65810302/470769
